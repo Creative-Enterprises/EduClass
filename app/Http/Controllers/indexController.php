@@ -23,6 +23,7 @@ class indexController extends Controller
         $content = Lecture::all();
         $single= Lecture::find($id);
         return view('page',['content'=>$content,'single'=>$single,'sameVideoId'=>$id]);
+
         
 
     }
