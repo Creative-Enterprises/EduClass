@@ -65,7 +65,6 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="btn green m-t-20">Compose</button>
-                                    <button class="btn grey darken-4 m-t-20">Discard</button>
                                 </form>
                             </div>
                         </div>

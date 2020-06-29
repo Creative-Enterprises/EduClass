@@ -58,15 +58,25 @@
                                     <h6>{{$viewDetails->title2}}</h6>
                                     <br>
                                     {{$viewDetails->description}}
-                                    <h6 class="m-t-30 font-medium">Attachment (3)</h6>
+                                    <h6 class="m-t-30 font-medium">Files uploaded</h6>
                                     <div class="row row-minus m-t-20">
                                         <div class="col s12 l3">
-                                            <img src="{{url('video/'.$viewDetails->videoName)}}" class="responsive-img">
-                                            <a href="#" class="m-r-10">Video</a><a href="#">Download</a>
-                                        </div>
+                                            <video
+                                                id="my-video"
+                                                class="video-js"
+                                                controls
+                                                preload="auto"
+                                                width="640"
+                                                height="auto"
+                                                data-setup="{}"
+                                            >
+                                                <source src="{{url('video/'.$viewDetails->videoName)}}" type="video/mp4" />
+                                            </video>
+                                            <label style="align-content: center"><h2>Video</h2></label>
+                                        </div><br>
                                         <div class="col s12 l3">
                                             <img src="{{url('attachment/'.$viewDetails->attachment2)}}" class="responsive-img">
-                                            <a href="#" class="m-r-10">Attachment</a><a href="#">Download</a>
+                                            <a href="#" class="m-r-10">Attachment</a>
                                         </div>
                                     </div>
                                 </div>

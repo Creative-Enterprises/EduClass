@@ -20,7 +20,6 @@
                             </video>
                         </div><!--vid-pr end-->
 {{--                        <img src="{{url('video/'.$cont->videoName)}}" alt="video/mp4">--}}
-                        <span class="vid-time">10:21</span>
                         <span class="watch_later">
                             <i class="icon-watch_later_fill"></i>
                         </span>
@@ -28,7 +27,7 @@
                 </div><!--vid_thumbnail end-->
                 <div class="video_info">
                     <h3><a href="{{url('/page/'.$cont->id)}}" title="">{{$cont->title1}}</a></h3>
-                    <h4><a href="{{url('/page/'.$cont->id)}}" title="">{{$cont->title2}}</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
+                    <h4><a href="{{url('/page/'.$cont->id)}}" title="">{{$cont->title2}}</a></h4>
                     <span>686K views .<small class="posted_dt"> {{$cont->created_at}}</small></span>
                 </div>
             </div><!--videoo end-->

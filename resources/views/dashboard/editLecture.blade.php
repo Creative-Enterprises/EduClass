@@ -33,7 +33,7 @@
                     <div class="card">
                         <div class="card-content">
                             <h5 class="card-title">Compose New Message</h5>
-                            <form action="/dashboard/updateLecture/{{$editDetails->id}}" method="put" enctype="multipart/form-data" class="dropzone">
+                            <form action="/dashboard/updateLecture/{{$editDetails->id}}" method="POST" enctype="multipart/form-data" class="dropzone">
                                 {{csrf_field()}}
                                 {{method_field('PUT')}}
 
@@ -66,8 +66,8 @@
                                         <input name="nameOfFile" value="{{$editDetails->attachment2}}" class="file-path validate" type="text" placeholder="attach one or more files">
                                     </div>
                                 </div>
+
                                 <button type="submit" class="btn green m-t-20">Compose</button>
-                                <button class="btn grey darken-4 m-t-20">Discard</button>
                             </form>
                         </div>
                     </div>

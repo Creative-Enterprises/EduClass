@@ -74,7 +74,6 @@
                                     <tr>
                                         <td>
                                             <div class="d-flex no-block align-items-center">
-                                                <div class="m-r-10"><img src="{{url('video/'.$detail->videoName)}}" alt="user" class="circle" width="45" /></div>
                                                 <div class="">
                                                     <h5 class="m-b-0 font-16 font-medium">{{$detail->title1}}</h5><span>{{$detail->title2}}</span></div>
                                             </div>

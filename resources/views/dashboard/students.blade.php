@@ -72,8 +72,8 @@
                                     <td >{{$student->user_id}}</td>
                                     <td>{{$student->password}}</td>
                                     <th>{{$student->created_at}}</th>
-                                    <td><button class="btn-primary">Edit</button></td>
-                                    <td><button class="btn-primary">Delete</button></td>
+                                    <td><span class="label cyan"><a href="/dashboard/editStudent/{{$student->id}}">Edit</a></span></td>
+                                    <td ><span class="label label-warning"><a href="/dashboard/deleteStudent/{{$student->id}}">Delete</a></span></td>
                                 </tr>
                                 @endforeach
                                 </tbody>

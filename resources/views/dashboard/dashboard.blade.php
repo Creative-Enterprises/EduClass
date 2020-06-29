@@ -30,8 +30,8 @@
                             <div class="card-content">
                                 <div class="d-flex no-block align-items-center">
                                     <div>
-                                        <h2 class="white-text m-b-5">250</h2>
-                                        <h6 class="white-text op-5 light-blue-text">Invoices</h6>
+                                        <h2 class="white-text m-b-5">{{$totalStudent}}</h2>
+                                        <h6 class="white-text op-5 light-blue-text">Total Student</h6>
                                     </div>
                                     <div class="ml-auto">
                                         <span class="white-text display-6"><i class="material-icons">assignment</i></span>
@@ -45,8 +45,8 @@
                             <div class="card-content">
                                 <div class="d-flex no-block align-items-center">
                                     <div>
-                                        <h2 class="white-text m-b-5">520</h2>
-                                        <h6 class="white-text op-5">News Feed</h6>
+                                        <h2 class="white-text m-b-5">{{$totalTeacher}}</h2>
+                                        <h6 class="white-text op-5">Total Teacher</h6>
                                     </div>
                                     <div class="ml-auto">
                                         <span class="white-text display-6"><i class="material-icons">receipt</i></span>
@@ -60,8 +60,8 @@
                             <div class="card-content">
                                 <div class="d-flex no-block align-items-center">
                                     <div>
-                                        <h2 class="white-text m-b-5">100</h2>
-                                        <h6 class="white-text op-5 text-darken-2">Sales</h6>
+                                        <h2 class="white-text m-b-5">{{$totalLecture}}</h2>
+                                        <h6 class="white-text op-5 text-darken-2">Total Lecture</h6>
                                     </div>
                                     <div class="ml-auto">
                                         <span class="white-text display-6"><i class="material-icons">equalizer</i></span>
@@ -75,8 +75,8 @@
                             <div class="card-content">
                                 <div class="d-flex no-block align-items-center">
                                     <div>
-                                        <h2 class="white-text m-b-5">450</h2>
-                                        <h6 class="white-text op-5">Revenue</h6>
+                                        <h2 class="white-text m-b-5">{{$totalComment}}</h2>
+                                        <h6 class="white-text op-5">Total Comments</h6>
                                     </div>
                                     <div class="ml-auto">
                                         <span class="white-text display-6"><i class="material-icons">attach_money</i></span>
@@ -166,7 +166,7 @@
                             <div class="card-content">
                                 <div class="d-flex align-items-center">
                                     <div>
-                                        <h5 class="card-title">Teachers</h5>
+                                        <h5 class="card-title">Assistent Teachers</h5>
                                     </div>
                                 </div>
                                 <div class="table-responsive m-b-20">
@@ -179,87 +179,33 @@
                                                 <th>Date</th>
                                                 <th>Status</th>
                                                 <th>Progress</th>
-                                                <th>Sales</th>
-                                                <th>Earned</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach($teachers as $teach)
                                             <tr>
                                                 <td>
                                                     <div class="d-flex no-block align-items-center">
-                                                        <div class="m-r-10"><img src="../../assets/images/users/d1.jpg" alt="user" class="circle" width="45" /></div>
                                                         <div class="">
-                                                            <h5 class="m-b-0 font-16 font-medium">Hanna Gover</h5><span>hgover@gmail.com</span></div>
+                                                            <h5 class="m-b-0 font-16 font-medium">{{$teach->name}}</h5><span>{{$teach->user_id}}</span></div>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <p class="">Elite Admin</p>
+                                                    <p class="">sas</p>
                                                 </td>
-                                                <td class="blue-grey-text text-darken-4 font-medium">$96K</td>
-                                                <td>May 23, 2018</td>
-                                                <td><span class="label label-info">Sale</span></td>
-                                                <td class="green-text"><i class="fa fa-arrow-up"></i> 23%</td>
-                                                <td>2356</td>
-                                                <td class="blue-grey-text  text-darken-4 font-medium">$96K</td>
+                                                <td class="blue-grey-text text-darken-4 font-medium">sas</td>
+                                                <td>{{$teach->created_at}}</td>
+                                                <td><span class="label label-info">Active</span></td>
+                                                <td class="green-text"><i class="fa fa-arrow-up"></i>Edit</td>
+                                                <td><span class="label cyan"><a href="/dashboard/editStudent/{{$teach->id}}">Edit</a></span></td>
+                                                <td ><span class="label label-warning"><a href="/dashboard/editStudent/{{$teach->id}}">Delete</a></span></td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex no-block align-items-center">
-                                                        <div class="m-r-10"><img src="../../assets/images/users/d2.jpg" alt="user" class="circle" width="45" /></div>
-                                                        <div class="">
-                                                            <h5 class="m-b-0 font-16 font-medium">Daniel Kristeen</h5><span>Kristeen@gmail.com</span></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="">Real Homes WP Theme</p>
-                                                </td>
-                                                <td class="blue-grey-text text-darken-4 font-medium">$85K</td>
-                                                <td>May 23, 2018</td>
-                                                <td><span class="label cyan">Extended</span></td>
-                                                <td class="green-text"><i class="fa fa-arrow-up"></i> 12%</td>
-                                                <td>2198</td>
-                                                <td class="blue-grey-text  text-darken-4 font-medium">$85K</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex no-block align-items-center">
-                                                        <div class="m-r-10"><img src="../../assets/images/users/d3.jpg" alt="user" class="circle" width="45" /></div>
-                                                        <div class="">
-                                                            <h5 class="m-b-0 font-16 font-medium">Julian Josephs</h5><span>Josephs@gmail.com</span></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="">MedicalPro WP Theme</p>
-                                                </td>
-                                                <td class="blue-grey-text text-darken-4 font-medium">$81K</td>
-                                                <td>May 23, 2018</td>
-                                                <td><span class="label label-primary">Multiple</span></td>
-                                                <td class="orange-text"><i class="fa fa-arrow-down"></i> 07%</td>
-                                                <td>1237</td>
-                                                <td class="blue-grey-text  text-darken-4 font-medium">$76K</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="d-flex no-block align-items-center">
-                                                        <div class="m-r-10"><img src="../../assets/images/users/2.jpg" alt="user" class="circle" width="45" /></div>
-                                                        <div class="">
-                                                            <h5 class="m-b-0 font-16 font-medium">Jan Petrovic</h5><span>hgover@gmail.com</span></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <p class="">HostinPress Html</p>
-                                                </td>
-                                                <td class="blue-grey-text text-darken-4 font-medium">-$30K</td>
-                                                <td>May 23, 2018</td>
-                                                <td><span class="label label-warning">Tax</span></td>
-                                                <td class="green-text"><i class="fa fa-arrow-up"></i> 25%</td>
-                                                <td>1956</td>
-                                                <td class="blue-grey-text  text-darken-4 font-medium">$90K</td>
-                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>
-                                <a href="javascript: void(0)"><i class="fas fa-angle-right"></i> View Complete Report</a>
                             </div>
                         </div>
                     </div>
@@ -269,7 +215,6 @@
             <!-- ============================================================== -->
             <!-- Container fluid scss in scafholding.scss -->
             <!-- ============================================================== -->
-            <footer class="center-align m-b-30">All Rights Reserved by Materialart. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.</footer>
         </div>
         <!-- ============================================================== -->
         <!-- Page wrapper scss in scafholding.scss -->

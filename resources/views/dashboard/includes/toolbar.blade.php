@@ -4,7 +4,7 @@
 <div class="preloader">
     <div class="loader">
         <div class="loader__figure"></div>
-        <p class="loader__label">Material Admin</p>
+        <p class="loader__label">Classroom</p>
     </div>
 </div>
 <!-- ============================================================== -->
@@ -58,26 +58,6 @@
             <!-- Right topbar icon scss in header.scss -->
             <!-- ============================================================== -->
             <ul class="right">
-                <li class="lang-dropdown"><a class="dropdown-trigger" href="javascript: void(0);" data-target="lang_dropdown"><i class="flag-icon flag-icon-in"></i></a>
-                    <ul id="lang_dropdown" class="dropdown-content">
-                        <li>
-                            <a href="#!" class="grey-text text-darken-1">
-                                <i class="flag-icon flag-icon-us"></i> English</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="grey-text text-darken-1">
-                                <i class="flag-icon flag-icon-fr"></i> French</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="grey-text text-darken-1">
-                                <i class="flag-icon flag-icon-es"></i> Spanish</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="grey-text text-darken-1">
-                                <i class="flag-icon flag-icon-de"></i> German</a>
-                        </li>
-                    </ul>
-                </li>
                 <!-- ============================================================== -->
                 <!-- Profile icon scss in header.scss -->
                 <!-- ============================================================== -->
@@ -89,16 +69,11 @@
                                 <div class="u-text">
                                     <h4>Steve Harvey</h4>
                                     <p>steve@gmail.com</p>
-                                    <a class="waves-effect waves-light btn-small red white-text">View Profile</a>
                                 </div>
                             </div>
                         </li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"><i class="material-icons">account_circle</i> My Profile</a></li>
-                        <li><a href="#"><i class="material-icons">account_balance_wallet</i> My Balance</a></li>
                         <li><a href="#"><i class="material-icons">inbox</i> Inbox</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#"><i class="material-icons">settings</i> Account Setting</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#"><i class="material-icons">power_settings_new</i> Logout</a></li>
                     </ul>

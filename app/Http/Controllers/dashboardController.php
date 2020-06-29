@@ -11,7 +11,25 @@ use Illuminate\Support\Facades\DB;
 class dashboardController extends Controller
 {
     public function index(){
-        return view('dashboard.dashboard');
+        $students=Student::all();
+        $student=0;
+        $teacher=0;
+        $lectures=Lecture::all();
+        $lecture=0;
+        $comments=0;
+        foreach ($lectures as $lec){
+            $lecture=$lecture+1;
+        }
+
+        foreach ($students as $stu){
+            if ($stu->role == 'teacher'){
+                $student = $student + 1;
+            }elseif ($stu->role == 'student'){
+                 $teacher=$teacher+1;
+            }
+        }
+
+        return view('dashboard.dashboard',['totalStudent'=>$student,'totalTeacher'=>$teacher,'totalComment'=>$comments,'totalLecture'=>$lecture,'teachers'=>$students]);
     }
     public function students(){
 
@@ -72,6 +90,26 @@ class dashboardController extends Controller
         $student->save();
         return redirect()->back();
     }
+    public function editStudent($id){
+        $editDetails = Student::find($id);
+        return view('dashboard.editStudent',['editDetail'=>$editDetails]);
+    }
+    public function updateStudent(Request $request,$id){
+
+        $student = Student::findOrFail($id);
+        $student->name = $request->name;
+        $student->std = $request->std;
+        $student->user_id = $request->user_id;
+        $student->password = $request->password;
+        $student->save();
+        return redirect()->back();
+    }
+    public function deleteStudent($role){
+
+        $column= Student::findOrFail($role);
+        $column->delete();
+        return back();
+    }
     public function addLecture(Request $request){
 
         print_r($request->input());
@@ -111,13 +149,10 @@ class dashboardController extends Controller
         $form->save();
         return redirect()->back();
     }
-    public function deleteLecture(Request $role){
+    public function deleteLecture($role){
 
-        $column= Lecture::find($role);
+        $column= Lecture::findOrFail($role);
         $column->delete();
-
-
-
         return back();
     }
 }

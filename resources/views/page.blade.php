@@ -38,9 +38,6 @@
                         <div class="abt-mk">
                             <div class="info-pr-sec">
                                 <div class="vcp_inf cr">
-                                    <div class="vc_hd">
-                                        <img src="images/resources/th5.png" alt="img">
-                                    </div>
                                     <div class="vc_info pr">
                                         <h4><a href="#" title="">ScereBro</a></h4>
                                         <span>Published on {{$single->created_at}}</span>
@@ -63,7 +60,9 @@
                                 </div>
                                 <div class="abt-rw">
                                     <h4>Description : </h4>
-                                    {{$single->description}}
+                                    @php
+                                    echo"$single->description";
+                                    @endphp
                                 </div>
                             </div><!--about-ch-sec end-->
                         </div><!--abt-mk end-->
@@ -93,9 +92,7 @@
 							<ul class="cmn-lst">
 								<li>
 									<div class="vcp_inf">
-										<div class="vc_hd">
-											<img src="images/resources/th2.png" alt="img">
-										</div>
+
 										<div class="coments">
 											<div class="pinned-comment">
 												<span><i class="icon-pinned"></i>Pinned by ScereBro</span>

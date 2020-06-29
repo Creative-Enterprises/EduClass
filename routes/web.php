@@ -14,14 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','indexController@index');
+//Route::get('/','indexController@index');
 Route::get('/page/{id}','indexController@page');
 Route::get('/log',function (){
     return view('login.login');
 });
 
 Route::get('/blank', 'DashboardController@blank');
-
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::post('/addStudent', 'DashboardController@addStudent');
@@ -37,7 +36,15 @@ Route::get('/dashboard/editLecture/{id}', 'DashboardController@editLecture');
 Route::put('/dashboard/updateLecture/{id}', 'DashboardController@updateLecture');
 Route::get('/dashboard/deleteLecture/{id}','DashboardController@deleteLecture');
 
+Route::get('/dashboard/editStudent/{id}','DashboardController@editStudent');
+Route::get('/dashboard/updateStudent/{id}','DashboardController@updateStudent');
+Route::get('/dashboard/deleteStudent/{id}','DashboardController@deleteStudent');
 
-//Auth::routes();
-//
-//Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
