@@ -13,14 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 //Route::get('/','indexController@index');
 Route::get('/page/{id}','indexController@page');
-Route::get('/log',function (){
-    return view('login.login');
-});
-
-Route::get('/blank', 'DashboardController@blank');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::post('/addStudent', 'DashboardController@addStudent');
@@ -39,10 +33,6 @@ Route::get('/dashboard/deleteLecture/{id}','DashboardController@deleteLecture');
 Route::get('/dashboard/editStudent/{id}','DashboardController@editStudent');
 Route::get('/dashboard/updateStudent/{id}','DashboardController@updateStudent');
 Route::get('/dashboard/deleteStudent/{id}','DashboardController@deleteStudent');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
